@@ -1,6 +1,15 @@
 import { IViewTypes } from './view.types';
 
 export abstract class BaseView implements IViewTypes {
-  abstract render();
-  abstract destroy();
+  app: HTMLElement;
+
+  constructor() {
+    this.app = document.getElementById('root')!;
+  }
+
+  setTitle(title: string) {
+    document.title = title;
+  }
+  abstract render(): void;
+  abstract destroy(): void;
 }
