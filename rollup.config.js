@@ -1,11 +1,12 @@
 import * as fs from 'fs';
 import postcss from 'postcss';
-import autoprefixer from 'autoprefixer';
 import scss from 'rollup-plugin-scss';
+import autoprefixer from 'autoprefixer';
+import typescript from '@rollup/plugin-typescript';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 export default {
-  input: 'src/index.js',
+  input: 'src/index.ts',
   output: {
     dir: 'dist',
     format: 'esm',
@@ -20,5 +21,6 @@ export default {
         postcss([autoprefixer({ overrideBrowserslist: ['last 2 versions'] })]),
     }),
     nodeResolve(),
+    typescript(),
   ],
 };

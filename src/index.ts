@@ -1,6 +1,6 @@
 'use strict';
 
-import './components/card/card';
+import './components/card/card.js';
 
 const testFunc = async () => {
   const resp = await fetch('https://api.spaceflightnewsapi.net/v3/articles');
