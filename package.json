@@ -1,0 +1,24 @@
+{
+  "name": "articles-appliaction-vanilla-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "live-server",
+    "build": "rollup -c --watch"
+  },
+  "keywords": [],
+  "author": "Morozov Vyacheslav<blurryfacebeat@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "autoprefixer": "^10.4.14",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
+    "rollup": "^3.19.1",
+    "rollup-plugin-scss": "^3.0.0",
+    "sass": "^1.59.3"
+  }
+}
