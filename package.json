@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "live-server",
-    "build": "rollup -c --watch"
+    "build": "mkdir dist && rollup -c --watch"
   },
   "keywords": [],
   "author": "Morozov Vyacheslav<blurryfacebeat@gmail.com>",
