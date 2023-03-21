@@ -1,9 +1,7 @@
-'use strict';
-
 import './components/card/card.js';
+import { BaseView } from '@/core/view/view';
 import { MainView } from '@/views/main/main';
 import { IApp, IRoute } from '@/index.types';
-import { BaseView } from '@/core/view/view';
 
 const testFunc = async () => {
   const resp = await fetch('https://api.spaceflightnewsapi.net/v3/articles');
@@ -13,6 +11,9 @@ const testFunc = async () => {
 class App implements IApp {
   currentView: BaseView | null = null;
   routes: Array<IRoute> = [{ path: '', view: MainView }];
+  appState: Record<string, any> = {
+    favorites: [],
+  };
 
   constructor() {
     window.addEventListener('hashchange', this.route.bind(this));
@@ -27,7 +28,7 @@ class App implements IApp {
       (route) => route.path === location.hash,
     )!.view;
 
-    this.currentView = new view();
+    this.currentView = new view(this.appState);
     this.currentView.render();
   }
 }

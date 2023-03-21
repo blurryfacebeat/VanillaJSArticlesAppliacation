@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "live-server",
-    "build": "mkdir dist && rollup -c --watch"
+    "build": "rollup -c --watch"
   },
   "keywords": [],
   "author": "Morozov Vyacheslav<blurryfacebeat@gmail.com>",
@@ -23,5 +23,8 @@
     "sass": "^1.59.3",
     "tslib": "^2.5.0",
     "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "on-change": "^4.0.2"
   }
 }
